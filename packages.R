@@ -13,5 +13,33 @@ library(dplyr)
 library(tidyr)
 library(openxlsx)
 library(ggplot2)
-library(quarto)
 
+
+## Packages for PDF extraction ----
+library(pdftools)
+library(tesseract)
+
+
+## Packages for LLM ----
+library(ellmer)
+library(ollamar)
+
+
+## Packages for Google integration and authentication ----
+library(googledrive)
+library(googlesheets4)
+library(gargle)
+library(httpuv)
+
+
+## Packages for testing and validation ----
+library(arsenal)
+
+
+## Packages for reporting and self-publishing ----
+library(quarto)
+library(rmarkdown)
+library(knitr)
+library(kableExtra)
+library(oxthema)
+library(tidytext)

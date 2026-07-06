@@ -1,4 +1,4 @@
-# General Targets Workflow Template --------------------------------------------
+# Workflow for LLM-aided scoping review on risk factors for stroke -------------
 
 
 ## Load libraries and custom functions ----

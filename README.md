@@ -1,43 +1,58 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# A template R workflow for general data analysis
+# Mapping the Evidence Gaps on Modifiable Risk Factors for Stroke in Middle and Low Income Countries (ATLAS Stroke Project)
 
 <!-- badges: start -->
 
 <!-- badges: end -->
 
-This repository is a template for a
+This repository is a
 [`docker`](https://www.docker.com/get-started)-containerised,
 [`{targets}`](https://docs.ropensci.org/targets/)-based,
 [`{renv}`](https://rstudio.github.io/renv/articles/renv.html)-enabled
-[`R`](https://cran.r-project.org/) workflow for general data analysis.
+[`R`](https://cran.r-project.org/) workflow for the ATLAS Stroke
+Project. The project aims to map the evidence gaps on modifiable risk
+factors for stroke in middle and low income countries. This is part of
+the **A**dvancing **T**hematic Research **L**andscapes **AS**sessment in
+Global Health (ATLAS) initiative
 
 ## About the Project
+
+The burden of stroke is among the top five causes of mortality and
+morbidity in middle and low income countries, and this burden is
+growing, yet evidence on contributing causes and the efficacy of
+interventions appears to be disproportionately generated in high-income
+countries for discrete population groups. The **ATLAS Stroke** research
+project aims to map existing evidence on stroke globally and identify
+gaps in knowledge on modifiable risk factors in middle and low income
+countries. This research project is part of the **A**dvancing
+**T**hematic Research **L**andscapes **AS**sessment in Global Health
+(ATLAS) initiative, a global initiative to map evidence gaps on various
+health topics and challenges in middle and low income countries.
 
 ## Repository Structure
 
 The project repository is structured as follows:
 
-    ihtm-targets-template
+    altas-stroke
         |-- .github/
-        |-- R/
         |-- data-raw/
         |-- data/
         |-- outputs/
-        |-- renv
-        |-- reports
+        |-- R/
+        |-- renv/
+        |-- reports/
+        |-- slides/
+        |-- tests/
         |-- .Rprofile
-        |-- _targets.R
         |-- packages.R
+        |-- _targets.R
         |-- renv.lock
 
 - `.github` contains project testing and automated deployment of outputs
   workflows via continuous integration and continuous deployment (CI/CD)
   using Github Actions.
-
-- `R/` contains functions developed/created specifically for use in this
-  workflow.
 
 - `data-raw/` contains raw datasets, usually either downloaded from
   source or added manually, that are used in the project.
@@ -46,6 +61,9 @@ The project repository is structured as follows:
   workflow.
 
 - `outputs/` contains compiled reports and figures produced by the
+  workflow.
+
+- `R/` contains functions developed/created specifically for use in this
   workflow.
 
 - `renv/` contains `renv` package specific files and directories used by
@@ -58,16 +76,21 @@ The project repository is structured as follows:
 - `reports/` contains literate code for R Markdown and/or Quarto reports
   rendered in the workflow.
 
+- slides/ contains literate code for R Markdown and/or Quarto slides
+  rendered in the workflow.
+
+- tests/ contains test code for testing the workflow’s LLM outputs.
+
 - `.Rprofile` file is a project R profile generated when initiating
   `renv` for the first time. This file is run automatically every time R
   is run within this project, and `renv` uses it to configure the R
   session to use the `renv` project library.
 
-- `_targets.R` file defines the steps in the workflow’s data ingest,
-  data processing, data analysis, and reporting pipeline.
-
 - `packages.R` file lists out all R package dependencies required by the
   workflow.
+
+- `_targets.R` file defines the steps in the workflow’s data ingest,
+  data processing, data analysis, and reporting pipeline.
 
 - `renv.lock` file is the `renv` lockfile which records enough metadata
   about every package used in this project that it can be re-installed
